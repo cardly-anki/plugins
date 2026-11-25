@@ -1,0 +1,18 @@
+{
+  "id": "review-heatmap",
+  "name": "Review Heatmap",
+  "version": "1.0.0",
+  "description": "Adds an interactive calendar review heatmap, streaks, and 90-day due forecast to the deck browser — modeled after Glutanimate's Review Heatmap.",
+  "author": "Cardly",
+  "homepage": "https://github.com/cardly-anki/plugins",
+  "defaultEnabled": true,
+  "permissions": [
+    "ui:decks",
+    "events:cards",
+    "events:app",
+    "stats:read",
+    "storage",
+    "app:read"
+  ],
+  "configHelp": "Configure Review Heatmap appearance and behavior.\n\n• viewMode: \"year\" | \"continuous\"\n• colorScheme: \"ice\" | \"olive\" | \"flame\" | \"lavender\"\n• showForecast: true | false\n• weekStartsOn: \"monday\" | \"sunday\"\n• dailyTarget: number (e.g. 20)\n• position: \"below\" | \"above\""
+}

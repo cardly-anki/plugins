@@ -1,4 +1,24 @@
 {
   "version": 1,
-  "plugins": []
+  "plugins": [
+    {
+      "id": "review-heatmap",
+      "name": "Review Heatmap",
+      "version": "1.0.0",
+      "description": "Adds an interactive calendar review heatmap, streaks, and 90-day due forecast to the deck browser, modeled after Glutanimate's Review Heatmap.",
+      "author": "Cardly",
+      "homepage": "https://github.com/cardly-anki/plugins/tree/main/plugins/review-heatmap",
+      "codeUrl": "https://raw.githubusercontent.com/cardly-anki/plugins/main/plugins/review-heatmap/index.js",
+      "updateUrl": "https://raw.githubusercontent.com/cardly-anki/plugins/main/registry.json",
+      "defaultEnabled": true,
+      "permissions": [
+        "ui:decks",
+        "events:cards",
+        "events:app",
+        "stats:read",
+        "storage",
+        "app:read"
+      ]
+    }
+  ]
 }
