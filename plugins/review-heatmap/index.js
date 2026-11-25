@@ -1244,6 +1244,13 @@ export default {
 
       gridScroll.appendChild(svg);
       card.appendChild(gridScroll);
+      if (typeof requestAnimationFrame === "function") {
+        requestAnimationFrame(() => {
+          if (gridScroll.scrollWidth > gridScroll.clientWidth) {
+            gridScroll.scrollLeft = gridScroll.scrollWidth - gridScroll.clientWidth;
+          }
+        });
+      }
 
       // 3. Stats line strictly below grid
       const statsRow = document.createElement("div");
