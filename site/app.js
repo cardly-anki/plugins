@@ -173,6 +173,17 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("modalMeta").textContent = `ID: ${plugin.id} • by ${plugin.author || "Community"}${plugin.category ? ` • ${plugin.category}` : ""}`;
     document.getElementById("modalDesc").textContent = plugin.description || "";
 
+    const modalLogo = document.getElementById("modalLogo");
+    if (modalLogo) {
+      if (plugin.iconUrl) {
+        modalLogo.src = plugin.iconUrl;
+        modalLogo.alt = `${plugin.name} logo`;
+        modalLogo.hidden = false;
+      } else {
+        modalLogo.hidden = true;
+      }
+    }
+
     // Screenshots gallery
     const gallery = document.getElementById("modalGallery");
     const tabs = document.getElementById("galleryTabs");
@@ -315,9 +326,18 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             <div class="card-body">
               <div class="card-head">
-                <div>
-                  <h3 class="card-title" data-open-id="${escapeHtml(p.id)}">${escapeHtml(p.name)}</h3>
-                  <div class="card-meta">by ${escapeHtml(p.author || "Community")} &bull; <code class="inline-code">${escapeHtml(p.id)}</code></div>
+                <div class="card-title-group">
+                  <div class="plugin-logo-wrap" data-open-id="${escapeHtml(p.id)}" style="cursor:pointer;">
+                    ${
+                      p.iconUrl
+                        ? `<img src="${escapeHtml(p.iconUrl)}" alt="${escapeHtml(p.name)} logo" class="plugin-logo" loading="lazy" />`
+                        : `<svg class="plugin-logo-fallback" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`
+                    }
+                  </div>
+                  <div>
+                    <h3 class="card-title" data-open-id="${escapeHtml(p.id)}">${escapeHtml(p.name)}</h3>
+                    <div class="card-meta">by ${escapeHtml(p.author || "Community")} &bull; <code class="inline-code">${escapeHtml(p.id)}</code></div>
+                  </div>
                 </div>
                 <span class="version-badge">v${escapeHtml(p.version)}</span>
               </div>

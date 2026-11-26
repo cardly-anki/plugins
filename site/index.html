@@ -180,12 +180,15 @@ export default {
     <dialog id="pluginModal" class="plugin-dialog" aria-labelledby="modalTitle">
       <div class="dialog-shell">
         <div class="dialog-header">
-          <div>
-            <div class="dialog-title-row">
-              <h2 id="modalTitle">Plugin Name</h2>
-              <span id="modalVersion" class="version-badge">v1.0.0</span>
+          <div class="dialog-title-group">
+            <img id="modalLogo" src="" alt="" class="dialog-logo" hidden />
+            <div>
+              <div class="dialog-title-row">
+                <h2 id="modalTitle">Plugin Name</h2>
+                <span id="modalVersion" class="version-badge">v1.0.0</span>
+              </div>
+              <p id="modalMeta" class="dialog-meta">by Author &bull; Category</p>
             </div>
-            <p id="modalMeta" class="dialog-meta">by Author &bull; Category</p>
           </div>
           <button type="button" class="dialog-close" id="closeModalBtn" aria-label="Close modal">&times;</button>
         </div>

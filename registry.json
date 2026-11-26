@@ -10,6 +10,7 @@
       "description": "Adds an interactive calendar review heatmap, streaks, and 90-day due forecast to the deck browser, modeled after Glutanimate's Review Heatmap.",
       "author": "Cardly",
       "homepage": "https://github.com/cardly-anki/plugins/tree/main/plugins/review-heatmap",
+      "iconUrl": "./plugins/review-heatmap/logo.png",
       "codeUrl": "https://raw.githubusercontent.com/cardly-anki/plugins/main/plugins/review-heatmap/index.js",
       "cardlyaddonUrl": "./packages/review-heatmap.cardlyaddon",
       "zipUrl": "./packages/review-heatmap.zip",
