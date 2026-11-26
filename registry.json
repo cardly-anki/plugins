@@ -5,10 +5,14 @@
       "id": "review-heatmap",
       "name": "Review Heatmap",
       "version": "1.0.0",
+      "category": "Statistics",
+      "tags": ["heatmap", "streaks", "forecast", "calendar"],
       "description": "Adds an interactive calendar review heatmap, streaks, and 90-day due forecast to the deck browser, modeled after Glutanimate's Review Heatmap.",
       "author": "Cardly",
       "homepage": "https://github.com/cardly-anki/plugins/tree/main/plugins/review-heatmap",
       "codeUrl": "https://raw.githubusercontent.com/cardly-anki/plugins/main/plugins/review-heatmap/index.js",
+      "cardlyaddonUrl": "./packages/review-heatmap.cardlyaddon",
+      "zipUrl": "./packages/review-heatmap.zip",
       "updateUrl": "https://raw.githubusercontent.com/cardly-anki/plugins/main/registry.json",
       "defaultEnabled": true,
       "permissions": [
@@ -18,6 +22,28 @@
         "stats:read",
         "storage",
         "app:read"
+      ],
+      "screenshots": [
+        {
+          "label": "Dark Mode",
+          "url": "./plugins/review-heatmap/screenshots/dark.png"
+        },
+        {
+          "label": "Light Mode",
+          "url": "./plugins/review-heatmap/screenshots/light.png"
+        },
+        {
+          "label": "Settings",
+          "url": "./plugins/review-heatmap/screenshots/settings.png"
+        }
+      ],
+      "configOptions": [
+        { "key": "viewMode", "values": "\"year\" | \"continuous\"", "desc": "Calendar year or rolling 12-month timeline" },
+        { "key": "colorScheme", "values": "\"ice\" | \"olive\" | \"flame\" | \"lavender\"", "desc": "Color palette matching Glutanimate's presets" },
+        { "key": "showForecast", "values": "true | false", "desc": "Highlight upcoming due cards up to 90 days ahead" },
+        { "key": "weekStartsOn", "values": "\"monday\" | \"sunday\"", "desc": "First day of the week row" },
+        { "key": "dailyTarget", "values": "number (default 20)", "desc": "Reference daily goal for heatmap color scale" },
+        { "key": "position", "values": "\"below\" | \"above\"", "desc": "Render below or above the deck table" }
       ]
     }
   ]
